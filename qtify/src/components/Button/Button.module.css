@@ -2,6 +2,16 @@
     background-color: var(--color-black);
     color: var(--color-primary);
     border-radius: 10px;
-    padding: 10px 16px;
+    padding: 0.6rem 1rem;
     cursor: pointer;
+    width: 8rem;
+    height: 3rem;
+}
+
+@media (max-width: 480px) {
+    .button {
+        font-size: 12px;
+        width: 4rem;
+        padding: 0.3rem 0.1rem;
+    }
 }

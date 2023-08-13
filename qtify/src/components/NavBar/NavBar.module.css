@@ -1,9 +1,17 @@
 .navbar {
     background-color: var(--color-primary);
     height: 74px;
-    width: 100vw;
-    padding: 0px 32px;
+    width: 100%;
     display: flex;
+    padding: 0rem 2rem;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
+}
+
+@media (max-width: 680px) {
+    .navbar {
+        justify-content: space-around;
+        padding: 0rem;
+    }
 }

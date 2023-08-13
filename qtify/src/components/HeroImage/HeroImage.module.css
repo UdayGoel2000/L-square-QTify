@@ -1,0 +1,70 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50rem;
+    height: 13.25rem;
+    margin: auto;
+}
+
+.hero {
+    width: 70%;
+    height: 6.25rem;
+    margin: auto;
+}
+
+.hero_typography {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 0rem;
+}
+
+.VibratingHeadphone {
+    width: 30%;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 25rem;
+        height: 7rem;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 4.25rem;
+    }
+
+    .hero_typography {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .VibratingHeadphone {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 12.5rem;
+        height: 3.5rem;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 2rem;
+    }
+
+    .hero_typography {
+        font-size: 0.5rem;
+        line-height: 0.7rem;
+    }
+
+    .VibratingHeadphone {
+        height: 100%;
+    }
+}
