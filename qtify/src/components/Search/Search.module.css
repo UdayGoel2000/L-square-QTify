@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     height: 3rem;
-    width: 35vw;
+    width: 50vw;
 }
 
 .searchButton {
@@ -23,18 +23,9 @@
     height: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    .wrapper {
-        width: 40vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .searchButton {
         padding: 0.875rem 0.5rem;
     }
 
-    .wrapper {
-        width: 50vw;
-    }
 }

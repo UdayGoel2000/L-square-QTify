@@ -1,0 +1,26 @@
+.cardMainDiv {
+    background-color: var(--color-white);
+    width: 159px;
+    height: 205px;
+    border-radius: 10px;
+}
+
+.followerBox {
+    background-color: var(--color-black);
+    border-radius: 10px;
+    width: 71px;
+    height: 23px;
+    align-items: center;
+    padding: 4px 8px;
+    align-items: flex-start;
+    margin-left: 6px;
+}
+
+.songcard_typography_card {
+    color: var(--color-white);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 2px 0px;
+}

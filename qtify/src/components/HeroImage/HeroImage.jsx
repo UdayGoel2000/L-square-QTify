@@ -11,13 +11,11 @@ const HeroImage = () => {
           Over thousands podcast episodes
         </p>
       </div>
-      {/* <div> */}
       <img
         className={styles.VibratingHeadphone}
         src={VibratingHeadphone}
         alt="VibratingHeadphone"
       />
-      {/* </div> */}
     </div>
   );
 };

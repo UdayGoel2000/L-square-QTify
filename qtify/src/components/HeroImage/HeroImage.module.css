@@ -35,7 +35,7 @@
     }
 
     .hero {
-        height: 3.25rem;
+        height: 4.25rem;
     }
 
     .hero_typography {
@@ -50,8 +50,8 @@
 
 @media screen and (max-width: 480px) {
     .wrapper {
-        width: 15rem;
-        height: 4rem;
+        width: 12.5rem;
+        height: 3.5rem;
         justify-content: center;
     }
 
@@ -60,8 +60,8 @@
     }
 
     .hero_typography {
-        font-size: 0.6rem;
-        line-height: 1rem;
+        font-size: 0.5rem;
+        line-height: 0.7rem;
     }
 
     .VibratingHeadphone {
