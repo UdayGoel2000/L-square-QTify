@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./SongCard.module.css";
 
 const SongCard = ({ cardDetails }) => {
-  let { name, imgUrl, follows } = cardDetails;
+  let { title, image, slug, follows } = cardDetails;
   return (
     <div style={{ width: 159 }}>
       <a
@@ -16,16 +16,16 @@ const SongCard = ({ cardDetails }) => {
         <div className={styles.cardMainDiv}>
           <img
             style={{ borderTopRightRadius: 10, borderTopLeftRadius: 10 }}
-            src={imgUrl}
-            alt={name}
+            src={image}
+            alt={slug}
             width={159}
             height={170}
           />
           <div className={styles.followerBox}>
-            <p className={styles.songcard_typography_card}>{follows}</p>
+            <p className={styles.songcard_typography_card}>{follows} Follows</p>
           </div>
         </div>
-        <p style={{ paddingTop: 6 }}>{name}</p>
+        <p style={{ paddingTop: 6 }}>{title}</p>
       </a>
     </div>
   );
