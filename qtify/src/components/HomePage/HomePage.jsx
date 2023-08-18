@@ -4,15 +4,17 @@ import HeroImage from "../HeroImage/HeroImage";
 import SongCard from "../Card/SongCard";
 import songImage from "../../assets/song.png";
 import useFetch from "../../hooks/useFetch";
+import Section from "../Section/Section";
 
 const HomePage = () => {
-  // let backendUrl = "https://qtify-backend-labs.crio.do";
+  let backendUrl = "https://qtify-backend-labs.crio.do";
   let cardObject = {
     id: "1",
     title: "New Bollywood",
     slug: "New Bollywood",
     image: songImage,
     follows: "100",
+    songs: [1, 2, 3, 4, 5, 6],
   };
 
   // let url = {
@@ -23,28 +25,25 @@ const HomePage = () => {
   //   geners: "https://qtify-backend-labs.crio.do/genres",
   // };
 
-  // const [topSongsData, setTopSongsData] = useFetch(
-  //   `${backendUrl}/albums/top`,
-  //   [],
-  //   (err) => console.log(err)
-  // );
+  const [topSongsData, setTopSongsData] = useFetch(
+    `${backendUrl}/albums/top`,
+    [],
+    (err) => console.log(err)
+  );
 
-  // const [newSongsData, setNewSongsData] = useFetch(
-  //   `${backendUrl}/albums/new`,
-  //   [],
-  //   (err) => console.log(err)
-  // );
-
-  // console.log("data1", topSongsData, "data2", newSongsData);
+  const [newSongsData, setNewSongsData] = useFetch(
+    `${backendUrl}/albums/new`,
+    [],
+    (err) => console.log(err)
+  );
 
   return (
     <>
       <NavBar />
       <HeroImage />
-      {/* {newSongsData.map((ele) => (
-        <SongCard cardDetails={ele} key={ele.id} />
-      ))} */}
-      <SongCard cardDetails={cardObject} />
+      <Section title={"Top Albums"} type="album" data={topSongsData} />
+      <Section title={"New Albums"} type="album" data={newSongsData} />
+      <SongCard cardDetails={cardObject} type={"album"} />
     </>
   );
 };
