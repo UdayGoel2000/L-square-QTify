@@ -26,3 +26,12 @@ body {
   color: var(--color-white);
   overflow-x: hidden;
 }
+
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
