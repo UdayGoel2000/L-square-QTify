@@ -1,4 +1,4 @@
-.header {
+.albumHeader {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -17,4 +17,42 @@
 .toggleText {
     cursor: pointer;
     color: var(--color-primary);
+}
+
+.genresHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.genreTab {
+    margin-top: 15px;
+    margin-bottom: 23px;
+}
+
+.genreButton {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 0;
+    width: 82px;
+    height: 56px;
+    top: 30px;
+    border-radius: 2px;
+    padding: 12px 16px;
+}
+
+.genreSelectedIndicator {
+    background-color: var(--color-primary);
+    width: 82px;
+    height: 4px;
+    top: 30px;
+    border-radius: 2px;
+}
+
+.genreNotSelectedIndicator {
+    background-color: var(--color-black);
+    width: 82px;
+    height: 4px;
+    top: 30px;
+    border-radius: 2px;
 }

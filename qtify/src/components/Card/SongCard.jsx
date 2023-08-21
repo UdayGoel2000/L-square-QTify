@@ -44,6 +44,47 @@ const SongCard = ({ cardDetails, type }) => {
           </Tooltip>
         );
       }
+      case "song": {
+        const { title, image, likes, durationInMs, genre } = cardDetails;
+        return (
+          <Tooltip
+            title={`${durationInMs} Milli Seconds`}
+            placement="top"
+            arrow
+          >
+            <div style={{ width: 159 }}>
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+                href="/"
+              >
+                <div className={styles.cardMainDiv}>
+                  <img
+                    style={{
+                      borderTopRightRadius: 10,
+                      borderTopLeftRadius: 10,
+                    }}
+                    src={image}
+                    alt={title}
+                    width={159}
+                    height={170}
+                  />
+                  <div className={styles.followerBox}>
+                    <p className={styles.songcard_typography_card}>
+                      {likes} Follows
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.banner}>
+                  <p style={{ paddingTop: 6 }}>{title}</p>
+                </div>
+              </a>
+            </div>
+          </Tooltip>
+        );
+      }
       default:
         return <></>;
     }

@@ -10,7 +10,8 @@ function useFetch(url, initialState, errorHandler) {
     );
   }, []);
 
-  return [data, setData];
+  // return [data, setData];
+  return data;
 }
 
 export default useFetch;

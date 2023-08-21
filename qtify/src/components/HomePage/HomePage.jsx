@@ -16,25 +16,47 @@ const HomePage = () => {
   //   geners: "https://qtify-backend-labs.crio.do/genres",
   // };
 
-  const [topSongsData, setTopSongsData] = useFetch(
-    `${backendUrl}/albums/top`,
-    [],
-    (err) => console.log(err)
-  );
+  const topSongsData =
+    // [topSongsData, setTopSongsData]
+    useFetch(`${backendUrl}/albums/top`, [], (err) => console.log(err));
 
-  const [newSongsData, setNewSongsData] = useFetch(
-    `${backendUrl}/albums/new`,
-    [],
-    (err) => console.log(err)
-  );
+  const newSongsData =
+    // [newSongsData, setNewSongsData]
+    useFetch(`${backendUrl}/albums/new`, [], (err) => console.log(err));
+
+  const songsData =
+    // [songsData, setSongsData]
+    useFetch(`${backendUrl}/songs`, [], (err) => console.log(err));
+
+  const genresData =
+    // [genresData, setGenresData]
+    useFetch(`${backendUrl}/genres`, [], (err) => console.log(err));
 
   return (
     <>
       <NavBar />
       <HeroImage />
       <div className={styles.sectionWrapper}>
-        <Section title={"Top Albums"} type="album" data={topSongsData} />
-        <Section title={"New Albums"} type="album" data={newSongsData} />
+        <Section
+          title={"Top Albums"}
+          type="album"
+          genres={[]}
+          data={topSongsData}
+        />
+        <Section
+          title={"New Albums"}
+          type="album"
+          genres={[]}
+          data={newSongsData}
+        />
+        <hr />
+        <Section
+          title={"Songs"}
+          type="song"
+          genres={genresData.data}
+          data={songsData}
+        />
+        <hr />
       </div>
     </>
   );
