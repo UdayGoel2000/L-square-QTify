@@ -6,7 +6,11 @@ const Seacrh = () => {
   return (
     <>
       <form className={style.wrapper}>
-        <input className={style.search}></input>
+        <input
+          type="text"
+          className={style.search}
+          placeholder="Search a album of your choice"
+        ></input>
         <button className={style.searchButton}>
           <SearchIcon />
         </button>
