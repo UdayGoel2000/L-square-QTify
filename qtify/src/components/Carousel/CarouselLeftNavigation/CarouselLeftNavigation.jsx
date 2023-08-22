@@ -8,7 +8,7 @@ const CarouselLeftNavigation = () => {
   const [isBegining, setIsBegining] = useState(swiper.isBeginning);
   useEffect(() => {
     swiper.on("slideChange", () => {
-      setIsBegining(swiper.isBegining);
+      setIsBegining(swiper.isBeginning);
     });
   });
   return (

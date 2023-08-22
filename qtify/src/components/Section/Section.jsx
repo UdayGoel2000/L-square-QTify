@@ -31,7 +31,7 @@ const Section = ({ title, type, data, genres }) => {
           <h3>{title}</h3>
           <div className={styles.genresHeader}>
             {genresData?.map((genre) => (
-              <div className={styles.genreTab}>
+              <div className={styles.genreTab} key={genre.key}>
                 <button
                   className={styles.genreButton}
                   id={genre.key}

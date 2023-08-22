@@ -4,6 +4,7 @@ import HeroImage from "../HeroImage/HeroImage";
 import useFetch from "../../hooks/useFetch";
 import Section from "../Section/Section";
 import styles from "./HomePage.module.css";
+import FaqSection from "../FaqSection/FaqSection";
 
 const HomePage = () => {
   let backendUrl = "https://qtify-backend-labs.crio.do";
@@ -58,6 +59,7 @@ const HomePage = () => {
         />
         <hr />
       </div>
+      <FaqSection />
     </>
   );
 };

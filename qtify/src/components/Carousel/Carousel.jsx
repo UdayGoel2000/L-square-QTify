@@ -19,7 +19,7 @@ const Carousel = ({ data, renderCardComponent }) => {
     <div className={styles.wrapper}>
       <Swiper
         initialSlide={0}
-        modulles={{ Navigation }}
+        modules={{ Navigation }}
         slidesPerView={"auto"}
         spaceBetween={40}
         allowTouchMove

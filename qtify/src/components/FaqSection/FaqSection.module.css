@@ -1,0 +1,10 @@
+.mainFaqDiv {
+    /* width: 1135px; */
+    width: 80%;
+    height: 345px;
+    top: 1399px;
+    left: 152px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--color-white);
+    margin: auto;
+}
