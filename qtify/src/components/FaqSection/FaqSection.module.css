@@ -1,10 +1,51 @@
 .mainFaqDiv {
     /* width: 1135px; */
-    width: 80%;
+    width: 80vw;
     height: 345px;
-    top: 1399px;
-    left: 152px;
     border-radius: 0px 0px 10px 10px;
-    background-color: var(--color-white);
     margin: auto;
+    margin-bottom: 40px;
+}
+
+.header {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.faqSection {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.faqSectionTitle {
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    background-color: var(--color-black);
+    border: 2px solid var(--color-white);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.faqSectionDetails {
+    display: none;
+    padding: 24px 32px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    color: var(--color-black);
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.faqSectionTitle+input[type="checkbox"] {
+    display: none;
+}
+
+.faqSectionTitle+input[type="checkbox"]:checked+.faqSectionDetails {
+    display: block;
 }
