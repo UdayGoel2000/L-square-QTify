@@ -56,8 +56,8 @@ const FaqSection = () => {
             className={styles.accordianToggle}
             name="toggle"
           />
-          <label className={styles.accordianTitle} htmlFor="first">
-            Is QTify free to use?
+          <label className={styles.accordianTitleTab} htmlFor="first">
+            <p className={styles.accordianTitle}>Is QTify free to use?</p>
             <span className={styles.accordianArrowIcon}>
               <AccordianArrow />
             </span>
@@ -73,8 +73,10 @@ const FaqSection = () => {
             className={styles.accordianToggle}
             name="toggle"
           />
-          <label className={styles.accordianTitle} htmlFor="second">
-            Can I download and listen to songs offline?
+          <label className={styles.accordianTitleTab} htmlFor="second">
+            <p className={styles.accordianTitle}>
+              Can I download and listen to songs offline?
+            </p>
             <span className={styles.accordianArrowIcon}>
               <AccordianArrow />
             </span>

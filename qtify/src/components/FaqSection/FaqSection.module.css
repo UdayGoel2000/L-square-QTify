@@ -22,7 +22,7 @@
     cursor: pointer;
 }
 
-.accordianTitle {
+.accordianTitleTab {
     padding: 24px 32px;
     display: flex;
     justify-content: space-between;
@@ -32,6 +32,10 @@
     border: 2px solid var(--color-white);
     border-radius: 10px;
     width: 100%;
+}
+
+.accordianTitle {
+    width: 90%;
 }
 
 .accordianContent>p {
@@ -53,7 +57,10 @@
 }
 
 .accordianArrowIcon {
-    max-width: 20px;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    /* max-width: 20px; */
     /* height: 20px; */
     transform: rotate(0deg);
     transition: transform 0.3s;
