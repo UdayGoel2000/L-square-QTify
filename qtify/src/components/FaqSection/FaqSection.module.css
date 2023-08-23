@@ -60,18 +60,16 @@
     width: 5%;
     display: flex;
     justify-content: center;
-    /* max-width: 20px; */
-    /* height: 20px; */
     transform: rotate(0deg);
     transition: transform 0.3s;
 
 }
 
-@media screen and (max-width:420px) {
+/* @media screen and (max-width:420px) {
     .accordianArrowIcon {
         max-width: 10px;
     }
-}
+} */
 
 .accordianTab>.accordianToggle:checked~.accordianContent {
     max-height: 100vh;

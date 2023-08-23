@@ -33,6 +33,24 @@ const HomePage = () => {
     // [genresData, setGenresData]
     useFetch(`${backendUrl}/genres`, [], (err) => console.log(err));
 
+  const faqData = [
+    {
+      key: "first",
+      value: {
+        title: "Is QTify free to use?",
+        content: "Yes! It is 100% free, and has 0% ads!",
+      },
+    },
+    {
+      key: "second",
+      value: {
+        title: "Can I download and listen to songs offline?",
+        content:
+          "Sorry, unfortunately we don't provide the service to download any songs.",
+      },
+    },
+  ];
+
   return (
     <>
       <NavBar />
@@ -59,7 +77,7 @@ const HomePage = () => {
         />
         <hr />
       </div>
-      <FaqSection />
+      <FaqSection data={faqData} />
     </>
   );
 };
