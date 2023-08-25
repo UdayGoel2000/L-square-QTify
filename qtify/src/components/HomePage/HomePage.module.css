@@ -14,6 +14,6 @@
     right: 25vw;
     width: 50vw;
     max-height: 50vh;
-    overflow: scroll;
+    overflow-y: scroll;
     z-index: 10;
 }
