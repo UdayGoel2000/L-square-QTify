@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import HeroImage from "../HeroImage/HeroImage";
 import useFetch from "../../hooks/useFetch";
 import Section from "../Section/Section";
 import styles from "./HomePage.module.css";
 import FaqSection from "../FaqSection/FaqSection";
+import SearchAutoComplete from "../SearchAutoComplete/SearchAutoComplete";
 
 const HomePage = () => {
   let backendUrl = "https://qtify-backend-labs.crio.do";
@@ -50,10 +51,41 @@ const HomePage = () => {
       },
     },
   ];
+  const [titleSearch, setTitleSearch] = useState("");
+  const [click, setClick] = useState(false);
+  const [dataForSeacrh, setDataForSeacrh] = useState([
+    ...topSongsData,
+    ...newSongsData,
+  ]);
+  useEffect(() => {
+    if (!titleSearch) setDataForSeacrh([...topSongsData, ...newSongsData]);
+    else {
+      performSearch(titleSearch.toLowerCase());
+    }
+  }, [titleSearch]);
 
+  const performSearch = (text) => {
+    const arr = [...topSongsData, ...newSongsData]?.filter(({ title }) =>
+      title.toLowerCase().includes(text)
+    );
+    setDataForSeacrh(arr);
+  };
   return (
     <>
-      <NavBar />
+      <NavBar
+        value={titleSearch}
+        setTitleSearch={setTitleSearch}
+        // setClick={setClick}
+      />
+      <div
+        className={styles.autoCompleteDiv}
+        style={{ display: titleSearch?.length ? "block" : "none" }}
+      >
+        <SearchAutoComplete
+          data={titleSearch?.length ? dataForSeacrh : topSongsData}
+          setValue={(value) => setTitleSearch(value)}
+        />
+      </div>
       <HeroImage />
       <div className={styles.sectionWrapper}>
         <Section

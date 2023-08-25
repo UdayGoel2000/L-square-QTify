@@ -4,3 +4,16 @@
     flex-direction: column;
     gap: 32px;
 }
+
+.autoCompleteDiv {
+    position: absolute;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-primary);
+    border-radius: 0 0 10px 10px;
+    left: 25vw;
+    right: 25vw;
+    width: 50vw;
+    max-height: 50vh;
+    overflow: scroll;
+    z-index: 10;
+}

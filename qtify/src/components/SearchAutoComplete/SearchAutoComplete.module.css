@@ -1,0 +1,41 @@
+.mainDiv {
+    width: 100%;
+    /* filter: brightness(50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: auto;
+    gap: 24px;
+}
+
+.albumInfoCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5%;
+    width: 95%;
+    height: 20%;
+}
+
+.albulData {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    width: 80%;
+}
+
+.albulData>img {
+    border: 5px solid rgba(29, 29, 29, 1);
+    border-radius: 5px;
+    width: 15%;
+    /* height: 15%; */
+}
+
+.typography>h6 h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+
+}
