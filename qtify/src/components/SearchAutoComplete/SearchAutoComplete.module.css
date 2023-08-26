@@ -1,18 +1,16 @@
 .mainDiv {
     width: 100%;
-    /* filter: brightness(50%); */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: auto;
-    /* gap: 24px; */
 }
 
 .albumInfoCard {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5% 2.5%;
+    padding: 0.5% 2.5%;
     width: 100%;
     height: 20%;
     cursor: pointer;
@@ -29,14 +27,12 @@
     align-items: center;
     gap: 16px;
     width: 80%;
-    /* padding: 2.5% 0; */
 }
 
 .albulData>img {
     border: 5px solid rgba(29, 29, 29, 1);
     border-radius: 5px;
     width: 15%;
-    /* height: 15%; */
 }
 
 .typography>h6 h3 {
@@ -44,5 +40,58 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 80%;
+}
 
+@media screen and (max-width:912px) {
+    .typography h6 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .albumInfoCard {
+        padding: 1% 8%;
+    }
+
+    .albulData>img {
+        width: 30%;
+    }
+
+    .typography h3 {
+        font-size: medium;
+    }
+
+
+
+    .albulData {
+        width: 70%;
+    }
+
+    .albulData+p {
+        font-size: small;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width:481px) {
+    .albumInfoCard {
+        padding: 1.5% 5%;
+    }
+
+    .albulData {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .albulData>img {
+        width: 25%;
+    }
+
+    .typography h3 {
+        font-size: large;
+    }
+
+    .albulData+p {
+        display: none;
+    }
 }
