@@ -72,17 +72,17 @@ const HomePage = () => {
   };
   return (
     <>
-      <NavBar
-        value={titleSearch}
-        setTitleSearch={setTitleSearch}
-        // setClick={setClick}
-      />
+      <NavBar value={titleSearch} setTitleSearch={setTitleSearch} />
       <div
         className={styles.autoCompleteDiv}
-        style={{ display: titleSearch?.length ? "block" : "none" }}
+        style={{
+          display:
+            titleSearch?.length && dataForSeacrh?.length ? "block" : "none",
+        }}
       >
         <SearchAutoComplete
           data={titleSearch?.length ? dataForSeacrh : topSongsData}
+          value={titleSearch}
           setValue={(value) => setTitleSearch(value)}
         />
       </div>

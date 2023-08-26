@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    /* border: 1px solid var(--color-primary); */
 }
 
 @media (max-width: 680px) {
