@@ -5,16 +5,22 @@
     flex-direction: column;
     align-items: center;
     padding: auto;
-    gap: 24px;
+    /* gap: 24px; */
 }
 
 .albumInfoCard {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2.5%;
-    width: 95%;
+    padding: 2.5% 2.5%;
+    width: 100%;
     height: 20%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.albumInfoCard:hover {
+    background-color: var(--color-hovor);
 }
 
 .albulData {
@@ -23,6 +29,7 @@
     align-items: center;
     gap: 16px;
     width: 80%;
+    /* padding: 2.5% 0; */
 }
 
 .albulData>img {
