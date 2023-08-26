@@ -12,6 +12,7 @@ const NavBar = ({ value, setTitleSearch, setClick }) => {
         placeholder={"Search a album of your choice"}
         value={value}
         changeValue={setTitleSearch}
+        setClick={setClick}
       />
       <Button>Give Feedback</Button>
     </nav>

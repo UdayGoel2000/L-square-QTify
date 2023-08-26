@@ -70,15 +70,17 @@ const HomePage = () => {
     );
     setDataForSeacrh(arr);
   };
-  // console.log(document.activeElement);
   return (
     <>
-      <NavBar value={titleSearch} setTitleSearch={setTitleSearch} />
+      <NavBar
+        value={titleSearch}
+        setTitleSearch={setTitleSearch}
+        setClick={setClick}
+      />
       <div
         className={styles.autoCompleteDiv}
         style={{
-          display:
-            titleSearch?.length && dataForSeacrh?.length ? "block" : "none",
+          display: click && dataForSeacrh?.length ? "block" : "none",
         }}
       >
         <SearchAutoComplete
