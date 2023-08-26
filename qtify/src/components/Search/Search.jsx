@@ -8,9 +8,12 @@ const Search = ({ placeholder, value, changeValue, setClick }) => {
       <form className={style.wrapper}>
         <input
           type="text"
+          id="searchBox"
           className={style.search}
           placeholder={placeholder}
           value={value}
+          // onFocus={}
+          // onFocusCapture={(e) => console.log(e.target.id)}
           // onClick={setClick(true)}
           onChange={(e) => {
             changeValue(e.target.value);

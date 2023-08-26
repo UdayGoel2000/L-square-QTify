@@ -70,6 +70,7 @@ const HomePage = () => {
     );
     setDataForSeacrh(arr);
   };
+  // console.log(document.activeElement);
   return (
     <>
       <NavBar value={titleSearch} setTitleSearch={setTitleSearch} />
