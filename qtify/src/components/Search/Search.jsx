@@ -6,6 +6,7 @@ const Search = ({ placeholder, value, changeValue, setClick }) => {
   const ref = useRef(null);
 
   const handleOutSide = (event) => {
+    // changeValue("");
     if (ref.current && !ref.current.contains(event.target)) {
       setClick(false);
     } else setClick(true);

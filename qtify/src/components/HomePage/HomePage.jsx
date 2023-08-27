@@ -62,7 +62,7 @@ const HomePage = () => {
     else {
       performSearch(titleSearch.toLowerCase());
     }
-  }, [titleSearch]);
+  }, [titleSearch, click]);
 
   const performSearch = (text) => {
     const arr = [...topSongsData, ...newSongsData]?.filter(({ title }) =>
